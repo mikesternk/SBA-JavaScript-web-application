@@ -23,7 +23,7 @@ This is a web application named "The Dog Picker" that allows users to select a d
 2. Choose a dog breed from the dropdown menu.
 3. View detailed information and an image of the selected dog breed.
 
-### Technologies Used
+## Technologies Used
 
 - HTML
 - CSS
@@ -33,5 +33,6 @@ This is a web application named "The Dog Picker" that allows users to select a d
 
 [The Dog API](https://www.thedogapi.com/ "Dog API")
 
-Credits
+### Credits
+
 This project utilizes the data provided by The Dog API.
