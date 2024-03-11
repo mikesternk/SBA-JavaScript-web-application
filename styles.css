@@ -9,12 +9,49 @@ body {
   height: 100vh;
   width: 100vw;
   display: flex;
+  /* justify-content: center;
+  align-items: center; */
 }
-
 main {
   margin: 10px;
   border: 1px solid black;
   width: 100%;
   /* height: 100%; */
-  /* display: flex; */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+select {
+  appearance: none;
+  height: 20px;
+  /* border: none; */
+  border-radius: 1%/30%;
+  width: 100%;
+  font-size: 1rem;
+  background-color: #fff;
+  border: 1px solid #caced1;
+  border-radius: 0.25rem;
+  color: #000;
+  cursor: pointer;
+}
+
+select:hover {
+  background-color: rgba(255, 255, 255, 0.5);
+  border: 1px solid black;
+  transition: 0.5s ease-in-out;
+}
+/* Custom Scrollbar */
+select::-webkit-scrollbar {
+  width: 0.5rem;
+  height: 0.5rem;
+}
+select::-webkit-scrollbar-thumb {
+  border-radius: 0.5rem;
+  background-color: #0004;
+  visibility: hidden;
+}
+select:hover::-webkit-scrollbar-thumb {
+  visibility: visible;
 }

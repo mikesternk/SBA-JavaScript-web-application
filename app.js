@@ -54,15 +54,28 @@ dogBreeds.addEventListener("change", async () => {
       const dogInfo = await res.json();
       //   console.log(dogInfo);
 
+      // Get the metric weight of the dogs
+      const dogWeightMetric = dogInfo.weight.metric;
+      console.log(dogWeightMetric);
+
+      // Get the imperial weight of the dogs
+      const dogWeightImperial = dogInfo.weight.imperial;
       information.innerHTML = `
         <h3>Name: ${dogInfo.name}</h3> 
         <p><b>Bred For:</b> ${dogInfo.bred_for}</p>
         <p><b>Temperament:</b> ${dogInfo.temperament}</p>
         <p><b>Life Span</b> ${dogInfo.life_span}</p>
-        <p><b>Weight:</b> ${dogInfo.weight} kgs</p>
+        <p><b>Weight:</b> ${dogWeightMetric} kgs</p><button id="weightBtn"></button>
         `;
 
+      // Retrieving Dog Images
+      image = document.createElement("img");
+      image.src = `https://cdn2.thedogapi.com/images/${dogInfo.reference_image_id}.jpg`;
+      image.alt = dogInfo.name;
+      image.height = "300";
+      console.log(dogInfo.reference_image_id);
       // Display the information
+      breedInfo.appendChild(image);
       breedInfo.appendChild(information);
       console.log(dogInfo);
     } catch (error) {
